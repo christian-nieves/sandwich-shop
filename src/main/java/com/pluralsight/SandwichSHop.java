@@ -13,7 +13,41 @@ public class SandwichSHop {
 
         int sandwichSize = myScanner.nextInt();
 
+        double basePrice = 0;
 
+        if (sandwichSize == 1) {
+            basePrice = 5.45;
+        } else if (sandwichSize == 2){
+            basePrice = 8.95;
+        } else {
+            System.out.println("Not an option");
+        }
 
+        System.out.println("Enter your age: ");
+        int age = myScanner.nextInt();
+
+        double totalCost = basePrice;
+
+        if (age <= 17) {
+            totalCost = basePrice - (basePrice * 0.10);
+        } else if (age >= 65) {
+            totalCost = basePrice - (basePrice * 0.20);
+        } else  {
+
+        }
+
+        System.out.printf("Your total cost is: $%.2f", totalCost);
+
+        myScanner.close();
+
+        }
     }
-}
+
+
+
+
+
+
+
+
+
